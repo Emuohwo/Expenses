@@ -23,14 +23,31 @@
 //     console.log(`It is ${temperature} degree in ${city}`)
 // }
 
-const book = {
-    title: 'Ego is he Enemy',
-    author: 'Ryan Holday',
-    publisher: {
-        // name: 'Penguin'
-    }
-};
+// const book = {
+//     title: 'Ego is he Enemy',
+//     author: 'Ryan Holday',
+//     publisher: {
+//         // name: 'Penguin'
+//     }
+// };
 
-const {name: publisherName = 'Self-Published'} = book.publisher;
+// const {name: publisherName = 'Self-Published'} = book.publisher;
 
-console.log(publisherName);
+// console.log(publisherName);
+
+
+// ARRAY DESTRUCTURING
+
+const address = ['234 Akinwunmi', 'Lekki', 'Lagos', 'Nigeria'];
+
+console.log(`It's ${address[1]}, ${address[2]}`);
+
+const [ street, location, city, country] = address;
+console.log(`It's ${location}, ${city}`);
+
+
+const item = ['Coffee (hot)', '$2.3', '$3.05', '$6.00', '$9.00'];
+
+const [ Coffee, , medium, , xlarge] = item;
+
+console.log(`A medium ${Coffee} costs ${medium}`)
