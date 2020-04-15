@@ -12,12 +12,12 @@ import getVisibleExpenses from './selectors/expenses';
 
 const store = configureStore();
 
-store.dispatch(addExpense({ description: 'Water Bill'}))
+store.dispatch(addExpense({ description: 'Water Bill', amount: 4500}))
 store.dispatch(addExpense({ description: 'Gas Bill'}));
 store.dispatch(setTextFilter('water'))
 
 setTimeout(() => {
-    store.dispatch(setTextFilter('rent'))
+    store.dispatch(setTextFilter('bill'))
 }, 3000);
 
     const state = store.getState()
