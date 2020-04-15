@@ -29,7 +29,7 @@ const editExpense = (id, updates) => ({
     type: 'EDIT_EXPENSE',
     id,
     updates
-})
+});
 // EXPENSES REDUCER
 const defaultExpensesReducerState = [];
 
