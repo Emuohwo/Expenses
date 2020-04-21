@@ -4,10 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "live-server public index.html",
+    "server": "live-server public index.html",
     "build:dev": "webpack",
     "build:prod": "webpack -p --env production",
-    "dev": "webpack-dev-server"
+    "dev": "webpack-dev-server",
+    "start": "node server/server.js",
+    "heroku-postbuild":"npm run build:prod"
   },
   "author": "Wise Athon",
   "license": "ISC",
